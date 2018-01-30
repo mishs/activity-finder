@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <a href="index.html#activityfinder"><h1>Cape Activity Finder</h1></a>
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="button-div">
+          <a href="#">left</a>
+        </div> <!--/button-div-->
+
+        <div class="picture-div">
+           <img class="main-image" id="main-image" src="images/boulders-beach/dassies.jpg" width="100%" alt="dassies">
+        </div>
+
+        <div class="button-div">
+          <a href="#">right</a>
+
+        </div>
+
+    </div><!--/container-->
+
+      <div class="image-list-container">
+        <div class="">
+          <a href="#" class="image-item">
+          <img src="images/boulders-beach/dassies.jpg" width="100%" alt="dassies" alt="">
+          </a>
+        </div>
+        <div class="">
+          <a href="#" class="image-item">
+            <img src="images/boulders-beach/family.jpg" width="100%" alt="dassies" alt="">
+          </a>
+        </div>
+        <div class="">
+          <a href="#" class="image-item">
+            <img src="images/boulders-beach/penguin_couple.jpg" width="100%" alt="dassies" alt="">
+          </a>
+        </div>
+        <div class="">
+          <a href="#" class="image-item">
+            <img src="images/boulders-beach/penguins_watching_people.jpg" width="100%" alt="dassies" alt="">
+          </a>
+        </div>
+        <div class="">
+          <a href="#" class="image-item">
+            <img src="images/boulders-beach/swimming_penguin.jpg" width="100%" alt="dassies" alt="">
+          </a>
+        </div>
+        <div class="">
+          <a href="#" class="image-item">
+            <img src="images/boulders-beach/walkway.jpg" width="100%" alt="dassies" alt="">
+          </a>
+        </div>
+      </div><!--/container-2-->
+
+    <style>
+      .container{
+        display: flex;
+        flex-direction: row;
+      }
+      .main-image{
+        height: 400px;
+        width: 100%;
+      }
+      .button-div{
+        width: 10%;
+      }
+      .picture-div{
+        width:80%;
+      }
+      .image-list-container{
+        display: flex;
+        direction: row;
+      }
+      .image-item img {
+        height: 100px;
+        width: 100%;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+      $(".image-item").on("click", function(e) {
+        e.preventDefault();
+        let image = $(this).find("img")[0];
+        let imageSrc = $(image).attr("src");
+        $("#main-image").attr("src", imageSrc);
+      });
+    </script>
+  </body>
+</html>
